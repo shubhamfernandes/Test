@@ -1,0 +1,9 @@
+SELECT DISTINCT(product_variants.color) as color, products.title as title FROM products
+INNER JOIN product_variants on products.id=product_variants.product_id
+ORDER by products.id
+
+
+Note:The reason i selected color first before title is 
+becasue The DISTINCT clause filters out FULL DUPLICATE ROWS. 
+It goes right after the SELECT keyword, since it applies to 
+the entire row, not single columns. You cannot use it in between columns 
